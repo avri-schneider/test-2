@@ -1,0 +1,12 @@
+name: Print Secret Value
+
+on: [push, pull_request] 
+
+jobs:
+  print-secret-value:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Secret Value
+        run: echo ${{ secrets.TEST_SECRET_ACCESS }}
+
+
